@@ -1,0 +1,28 @@
+[package]
+name = "macros"
+# When releasing to crates.io:
+# - Remove path dependencies
+# - Update CHANGELOG.md.
+# - Create "tokio-macros-1.x.y" git tag.
+version = "2.5.0"
+edition = "2021"
+rust-version = "1.70"
+authors = ["Tokio Contributors <team@tokio.rs>"]
+license = "MIT"
+repository = "https://github.com/tokio-rs/tokio"
+homepage = "https://tokio.rs"
+description = """
+Tokio's proc macros.
+"""
+categories = ["asynchronous"]
+
+[lib]
+proc-macro = false
+
+[dependencies]
+tokio-macros = { version = "~2.5.0", path = "../tokio-macros" }
+
+[features]
+
+[package.metadata.docs.rs]
+all-features = true
