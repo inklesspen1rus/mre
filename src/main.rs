@@ -18,6 +18,8 @@ async fn reenter(gate: &Gate, symbol: String) -> String {
 
 #[ntex::main]
 async fn main() -> std::io::Result<()> {
+  tracing_subscriber::fmt::init();
+
   default_provider()
     .install_default()
     .expect("Failed to install default CryptoProvider");
